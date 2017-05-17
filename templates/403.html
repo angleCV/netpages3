@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+  <meta name="viewport" content="width=1366px">
+  <title>index</title>
+  <script src="{% static 'netpages/js/jQuery-2.1.4.min.js'%}"></script>
+  <script src="{% static 'netpages/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'netpages/Swiper-3.4.1/dist/js/swiper.js'%}"></script>
+  <link rel="stylesheet" href="{% static 'netpages/bootstrap/css/bootstrap.min.css'%}">
+  <link rel="stylesheet" href="{% static 'netpages/Swiper-3.4.1/dist/css/swiper.css'%}">
+  <link rel="stylesheet" href="{%static 'netpages/css/style.css'%}">
+</head>
+<body>
+  <div class="wrap-box">
+    <div class="head-top">
+      <div><img src="{%static 'netpages/img/logo51090.gif'%}" class="img-responsive"></div>
+    </div>
+    <div class="head-nav">
+      <ul class="head-nav wrap-catalog-box">
+        <li class="active">
+          <a href="./#">首页</a>
+        </li>
+        <li>
+          <a href="aboutus">关于我们</a>
+        </li>
+        <li>
+          <a href="newscenter">新闻中心</a>
+        </li>
+        <li>
+          <a href="industryinfo">行业资讯</a>
+        </li>
+        <li>
+          <a href="productshow">产品展示</a>
+        </li>
+        <li>
+          <a href="productandservice">产品与服务</a>
+        </li>
+        <li>
+          <a href="activitytheme">活动主题</a>
+        </li>
+     </ul>
+    </div>
+    <div class="page-container">
+      <div class="swiper-mo">
+        <div id="myCarousel" class="carousel slide">
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                {% block top %}
+                <div class="item active">
+                    <img src={{p1}} alt="First slide">
+                    <div class="carousel-caption"></div>
+                </div>
+                <div class="item">
+                    <img src={{p2}} alt="Second slide">
+                    <div class="carousel-caption"></div>
+                </div>
+                <div class="item">
+                    <img src={{p3}} alt="Third slide">
+                    <div class="carousel-caption"></div>
+                </div>
+            {% endblock%}
+                <!--
+                <div class="item active">
+                    <img src="{% static 'netpages/img/banner1365385.jpg'%}" alt="First slide">
+                    <div class="carousel-caption"></div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'netpages/img/banner1365385.jpg'%}" alt="Second slide">
+                    <div class="carousel-caption"></div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'netpages/img/wp-content/uploads/2014/07/slide3.png' %}" alt="Third slide">
+                    <div class="carousel-caption"></div>
+                </div>
+                -->
+            </div>
+            <!-- 轮播（Carousel）导航 -->
+            <a class="carousel-control left custom" href="#myCarousel"
+                data-slide="prev">&lsaquo;
+            </a>
+            <a class="carousel-control right custom" href="#myCarousel"
+                data-slide="next">&rsaquo;
+            </a>
+        </div>
+      </div>
+      <div>
+
+		<p>  403: Http Forbidden:  您访问的链接受限制 </p>
+
+          <a href="netpages">返回首页</a>
+    </div>
+    <div class="foot">
+      <p>技术支持：广州清朗元安网络科技有限公司   粤ICP8125546122</p>
+    </div>
+  </div>
+</body>
+<script>
+    
+</script>
+</html>
