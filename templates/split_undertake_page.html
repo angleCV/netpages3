@@ -120,7 +120,7 @@
               <a href = {{post.id}} >
                   <h3>{{ post.acticle_title }} </h3>
               </a>
-            <p>{{ post.article_content }}</p>
+            <p>{{ post.article_content | safe }}</p>
           </div>
         </div>
          {% endfor %}
@@ -135,10 +135,14 @@
 			<li><span class="title">Pages:</span></li>
               {% block pages_split%}
 			{% for url in urls%}
-
+                {% if i == forloop.counter%}
+                   <li><span class="page current">{{i}}</span></li>
+                {%else%}
+              <li><a href={{ url }} title={{  forloop.counter }} class="page"> {{forloop.counter}}</a></li>
+                {%endif%}
 			<!-- <li><span class="page current">1</span></li> -->
-			<li><a href={{ url }} title={{  forloop.counter }} class="page"> {{forloop.counter}}</a></li>
             {% endfor %}
+              <li><span class="title">当前页数：{{i}}</span></li>
             {% endblock %}
 
               <!--

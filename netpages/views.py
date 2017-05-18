@@ -158,9 +158,10 @@ def set_pages(request, cate, page):
     # I have forget the 3Index pic then add it
     p1, p2, p3 = set3Pic()
 
+    i = int(page) #input is a int// and forloop is a int too!!!
     return render(request, "split_undertake_page.html", {'posts':posts, 'first_post':first_post, 'cate':cate,
                                                          'p1':p1, 'p2':p2, 'p3':p3,
-                                                        'urls':urls ,'i_pages':i_pages})
+                                                        'urls':urls ,'i':i})
 
 
 

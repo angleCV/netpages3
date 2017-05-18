@@ -134,12 +134,17 @@
 		  <ol class="wp-paginate">
 			<li><span class="title">Pages:</span></li>
               {% block pages_split%}
-			{% for url in urls%}
 
+              {% for url in urls%}
+                {% if 1 == forloop.counter%}
+                   <li><span class="page current">{{i}}</span></li>
+                {%else%}
+              <li><a href={{ url }} title={{  forloop.counter }} class="page"> {{forloop.counter}}</a></li>
+                {%endif%}
 			<!-- <li><span class="page current">1</span></li> -->
-			<li><a href={{ url }} title={{  forloop.counter }} class="page"> {{forloop.counter}}</a></li>
             {% endfor %}
-            {% endblock %}
+
+              {% endblock %}
 
               <!--
 			<li><a href="" title="6" class="page">6</a></li>
